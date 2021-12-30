@@ -1,0 +1,10 @@
+name: 'cd'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    uses: bootstrapper-demo-org/cicd/.github/workflows/tf_module_cd.yml@main
