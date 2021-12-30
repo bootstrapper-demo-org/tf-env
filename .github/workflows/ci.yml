@@ -1,0 +1,12 @@
+name: 'ci'
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  terraform:
+    uses: bootstrapper-demo-org/cicd/.github/workflows/tf_module_ci.yml@main
+    with:
+      workdirs: 'base k8s'
